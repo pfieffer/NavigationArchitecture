@@ -14,7 +14,11 @@
         android:id="@+id/list_dest"
         android:name="com.example.navigationarchitectureexample.ListFragment"
         android:label="fragment_item_list"
-        tools:layout="@layout/fragment_item_list" />
+        tools:layout="@layout/fragment_item_list" >
+        <action
+            android:id="@+id/action_to_params"
+            app:destination="@id/params_dest" />
+    </fragment>
     <fragment
         android:id="@+id/params_dest"
         android:name="com.example.navigationarchitectureexample.ParamsFragment"
@@ -29,5 +33,8 @@
             android:defaultValue="Hamilton"
             app:argType="string" />
     </fragment>
+    <action
+        android:id="@+id/action_global_params"
+        app:destination="@id/params_dest" />
 
 </navigation>
