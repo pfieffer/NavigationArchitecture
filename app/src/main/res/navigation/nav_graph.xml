@@ -32,6 +32,7 @@
             android:name="param2"
             android:defaultValue="Hamilton"
             app:argType="string" />
+        <deepLink app:uri="www.navcomponent.com/{param1}/{param2}"/>
     </fragment>
     <action
         android:id="@+id/action_global_params"
