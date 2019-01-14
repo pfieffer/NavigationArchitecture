@@ -11,7 +11,10 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : AppCompatActivity(), ListFragment.OnListFragmentInteractionListener {
 
     override fun onListFragmentInteraction(item: DummyContent.DummyItem?) {
-        Log.i("Navigation", " selected $item")
+        val args = Bundle()
+        args.putString("param1", "Selected")
+        args.putString("param2",item.toString())
+        findNavController(R.id.nav_host).navigate(R.id.params_dest, args)
     }
 
     private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
@@ -25,7 +28,10 @@ class MainActivity : AppCompatActivity(), ListFragment.OnListFragmentInteraction
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_notifications -> {
-                findNavController(R.id.nav_host)
+                val args = Bundle()
+                args.putString("param1", "Lydia")
+                args.putString("param2","Romero")
+                findNavController(R.id.nav_host).navigate(R.id.params_dest, args)
                 return@OnNavigationItemSelectedListener true
             }
         }

@@ -15,5 +15,19 @@
         android:name="com.example.navigationarchitectureexample.ListFragment"
         android:label="fragment_item_list"
         tools:layout="@layout/fragment_item_list" />
+    <fragment
+        android:id="@+id/params_dest"
+        android:name="com.example.navigationarchitectureexample.ParamsFragment"
+        android:label="fragment_params"
+        tools:layout="@layout/fragment_params" >
+        <argument
+            android:name="param1"
+            android:defaultValue="Alexander"
+            app:argType="string" />
+        <argument
+            android:name="param2"
+            android:defaultValue="Hamilton"
+            app:argType="string" />
+    </fragment>
 
 </navigation>
